@@ -1,0 +1,68 @@
+ext {
+    supportLibrary_version = '28.0.0'
+    archLifecycle_version = '1.1.1'
+    retrofit_version = '2.4.0'
+    butterKnife_version = '8.8.1'
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.tonytekinsights.gomovies"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //TODO remove key once ready for GitHub
+        //buildConfigField "String", "ApiKey", '\"TMDB KEY GOES HERE\"'
+        buildConfigField "String", "TMDB_IMAGE_BASE_URL", '\"https://image.tmdb.org/t/p/\"'
+        buildConfigField "String", "TMDB_API_BASE_URL", '\"https://api.themoviedb.org/3/\"'
+        buildConfigField "String", "API_KEY", '\"d58703d23cae8a7409f86833adebadb1\"'
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportLibrary_version"
+    implementation "com.android.support:exifinterface:$supportLibrary_version"
+    implementation "com.android.support:recyclerview-v7:$supportLibrary_version"
+    implementation "com.android.support:cardview-v7:$supportLibrary_version"
+    implementation "com.android.support:design:$supportLibrary_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //ButterKnife
+    implementation "com.jakewharton:butterknife:$butterKnife_version"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnife_version"
+    //Room
+    implementation "android.arch.persistence.room:runtime:$archLifecycle_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$archLifecycle_version"
+    //Lifecycle
+    implementation "android.arch.lifecycle:runtime:$archLifecycle_version"
+    implementation "android.arch.lifecycle:extensions:$archLifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$archLifecycle_version"
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    //OkHttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

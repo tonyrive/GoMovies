@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Go Movies</string>
+
+    <string name="movie_name">Movie Name</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="movie_description">Movie cover</string>
+    <string name="movie_backdrop">Movie backdrop</string>
+    <string name="movie_release">Year</string>
+    <string name="movie_mins">Mins</string>
+    <string name="movie_rating">8.1/10</string>
+    <string name="movie_fav_button">MARK AS FAVORITE</string>
+    <string name="no_network">No internet connection</string>
+    <string name="dismiss">dismiss</string>
+    <string name="movie_id">MovieID</string>
+
+    <string name="tmdb_file_size_185">w185</string>
+    <string name="tmdb_file_size_500">w500</string>
+    <string name="tmdb_api_key">api_key</string>
+
+    <string name="tmdb_popular_movies">movie/popular</string>
+    <string name="tmdb_top_rated_movies">movie/top_rated</string>
+
+    <string name="tmdb_movie_info">movie/</string>
+
+    <string name="menu_popular">Popular</string>
+    <string name="menu_top_rated">Top Rated</string>
+</resources>

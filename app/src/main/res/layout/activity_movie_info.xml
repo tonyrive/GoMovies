@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:id="@+id/detailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.tonytekinsights.gomovies.ui.MovieInfoActivity">
+
+        <ImageView
+            android:id="@+id/mv_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/movie_backdrop"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_backdrop" />
+
+        <ImageView
+            android:id="@+id/mv_poster"
+            android:layout_width="170dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_alignBottom="@+id/mv_fav"
+            android:contentDescription="@string/movie_description"
+            android:elevation="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/test_poster" />
+
+        <TextView
+            android:id="@+id/mv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mv_poster"
+            android:layout_alignStart="@+id/mv_poster"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="#E6000000"
+            android:padding="4dp"
+            android:text="@string/movie_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mv_backdrop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/mv_poster"
+            android:text="@string/movie_release"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mv_mins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/mv_year"
+            android:layout_alignStart="@id/mv_year"
+            android:layout_below="@+id/mv_year"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mv_poster"
+            android:text="@string/movie_mins"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/mv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/mv_year"
+            android:layout_alignStart="@id/mv_year"
+            android:layout_below="@+id/mv_mins"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mv_poster"
+            android:text="@string/movie_rating"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/mv_fav"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignLeft="@id/mv_year"
+            android:layout_alignStart="@id/mv_year"
+            android:layout_below="@+id/mv_rating"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/mv_poster"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/movie_fav_button"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/mv_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mv_poster"
+            android:layout_alignStart="@+id/mv_poster"
+            android:layout_below="@+id/mv_poster"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/movie_details"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/pg_bar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+</RelativeLayout>
+</ScrollView>
